@@ -6,3 +6,5 @@ def parse_lines(day, example=False):
     with open(input_path, 'r') as f:
         lines = f.read().splitlines()
     return lines
+
+
