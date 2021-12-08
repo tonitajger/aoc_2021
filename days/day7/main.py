@@ -36,8 +36,9 @@ def part_2(lines):
 
 @click.command()
 @click.option('--part', '-p', prompt='Part 1 or 2?')
-def main(part):
-    print(globals()['part_' + part](parse_list(7, example=False))) # Replace with day
+@click.option('--example', '-e', is_flag=True, prompt='Run with example?')
+def main(part, example):
+    print(globals()['part_' + part](parse_list(7, example=example))) # Replace with day
 
 
 if __name__ == '__main__':

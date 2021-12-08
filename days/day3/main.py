@@ -69,8 +69,9 @@ def part_2(lines):
 
 @click.command()
 @click.option('--part', '-p', prompt='Part 1 or 2?')
-def main(part):
-    print(globals()['part_' + part](parse_lines(3, example=False)))
+@click.option('--example', '-e', is_flag=True, prompt='Run with example?')
+def main(part, example):
+    print(globals()['part_' + part](parse_lines(3, example=example)))
 
 
 if __name__ == '__main__':
