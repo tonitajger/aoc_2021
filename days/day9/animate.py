@@ -13,7 +13,7 @@ from utils.input_parser import parse_lines
 frames = []
 im_counter = 0
 def take_image(im):
-    frames.append(Image.fromarray(np.uint8(cm.plasma(im)*255)).resize((1024,1024)))
+    frames.append(Image.fromarray(np.uint8(cm.plasma(im)*255)))#.resize((1024,1024)))
 
 
 class Grid:
