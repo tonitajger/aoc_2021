@@ -118,7 +118,9 @@ def part_2(lines):
             append_images=frames[1:], 
             optimize=False, 
             duration=[1] * (len(frames) - 1) + [1000],
-            loop=0
+            loop=0,
+            subsampling=0,
+            quality=100
         )
 
     return math.prod(largest)
