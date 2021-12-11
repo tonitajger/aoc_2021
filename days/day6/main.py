@@ -32,10 +32,10 @@ def part_2(lines):
 
 @click.command()
 @click.option('--part', '-p', prompt='Part 1 or 2?')
-@click.option('--example', '-e', is_flag=True, prompt='Run with example?')
+@click.option('--example', '-e', is_flag=True, help='Run with example?')
 def main(part, example):
     print(globals()['part_' + part](parse_lines(6, example=example))) # Replace with day
-
+    
 
 if __name__ == '__main__':
     main()

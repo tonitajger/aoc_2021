@@ -13,7 +13,7 @@ def part_2(lines):
 
 @click.command()
 @click.option('--part', '-p', prompt='Part 1 or 2?')
-@click.option('--example', '-e', is_flag=True, prompt='Part 1 or 2?')
+@click.option('--example', '-e', is_flag=True, help='Run with example?')
 def main(part, example):
     print(globals()['part_' + part](parse_lines(9999, example=example))) # Replace with day
 
